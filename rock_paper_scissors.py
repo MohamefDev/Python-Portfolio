@@ -1,0 +1,59 @@
+print("welcome to the rock and paper and scissors game")
+
+ascii_rock="""
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+"""
+
+# Paper
+ascii_paper="""
+     _______
+---'    ____)____
+           ______)
+          _______)
+         _______)
+---.__________)
+"""
+
+# Scissors
+ascii_scissors="""
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+"""
+confirm=input("press enter to continue or(help)for help rules \n")
+if confirm=="help":
+    print("""
+    ●●●●●●●●●●Rules●●●●●●●●●
+    Rock schames scissors _>rock wins
+    paper covert Rock _> paper wins
+    scissors cut paper _> scissors wins
+    """)
+choices =["rock","paper","scissor"]
+choose =input("chosse rock or paper or scissors ")
+import random 
+computer_result=random.choice(choices)
+if computer_result==choose:
+    print("it a tie")
+elif computer_result=="rock" and choose=="scissors":
+    print(f"\n you chosse {ascii_scissors} the resulte computer {ascii_rock}")
+    print("you lost,rock beats scissors")
+elif computer_result=="paper" and choose=="rock":
+        print(f"\n you chosse {ascii_rock} \n{ascii_paper}")
+        print("you lost,paper beats rock")
+elif computer_result =="scissors" and choose=="paper":
+        print(f"\n you chosse {ascii_paper} \nthé computer_result {ascii_scissors}")
+        print("you lost,scissors beats paper")
+elif choose is not choice :
+    print("please stick to the choices")
+else:
+    print(f" the resulte computer is {computer_result}")
+    print("you win")
+    

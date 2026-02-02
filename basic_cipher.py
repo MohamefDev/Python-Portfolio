@@ -1,0 +1,19 @@
+import string
+
+def info():
+    message=input("entrer a message: ")
+    number_shift=int(input("entrer a shift number: "))
+    alphabet1=string.ascii_lowercase
+    alphabet2=string.ascii_uppercase
+    alphabet=alphabet1+alphabet2
+    encrypted_message=""
+    
+    for letter in message:
+        if letter in alphabet:
+            position=alphabet.index(letter)
+            position2=(position+number_shift)%52
+            encrypted_message+=alphabet[position2]
+        else:
+            encrypted_message+=letter
+    print(encrypted_message)
+info()
