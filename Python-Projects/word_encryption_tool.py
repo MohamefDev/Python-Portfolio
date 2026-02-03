@@ -2,11 +2,7 @@ import string
 
 alphabet = string.ascii_lowercase
 word = input("Enter the word to encrypt: ").lower()
-
-try:
-    shift = int(input("Enter the encryption key (number): "))
-except ValueError:
-    shift = 2
+shift = int(input("Enter the shift number: "))
 
 encrypted_word = ""
 
@@ -19,4 +15,5 @@ for letter in word:
         encrypted_word += letter
 
 print(f"Encrypted word: {encrypted_word}")
+
 
