@@ -2,10 +2,11 @@ import random
 
 print("Welcome to the Coin Guessing Game!")
 
-print("Choose a method to toss the coin:")
-print("1. Using random.random()")
-print("2. Using random.randint()")
-
+print("""
+Choose a method to toss the coin:
+1. Using random.random()
+2. Using random.randint()
+""")
 choice = input("Enter your choice (1 or 2): ")
 
 # تحديد نتيجة الكمبيوتر بناءً على الطريقة المختارة
